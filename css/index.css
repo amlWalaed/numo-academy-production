@@ -601,35 +601,67 @@ video {
 }
 
 .section-title {
+  text-align: center;
   font-size: 2rem;
   --tw-text-opacity: 1;
   color: rgb(19 25 32 / var(--tw-text-opacity, 1));
 }
 
 .btn {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
   display: flex;
   font-weight: 700;
   font-size: 14px;
   gap: 0.5rem;
   border-radius: 2.5rem;
   padding: 0.75rem 1rem;
+  border: 1px solid transparent;
 }
 
 .btn-brand {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 162 196 / var(--tw-bg-opacity, 1));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  --solid-bg-color: #22A2C4;
+  --solid-text-color: #fff;
+  --solid-border-color: #22A2C4;
+  --solid-hover-color: #32A598;
+  --outline-bg-color: #fff;
+  --outline-text-color: #22A2C4;
+  --outline-border-color: #22A2C4;
+  --outline-hover-color: #32A598;
 }
 
-.btn-brand:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 165 152 / var(--tw-bg-opacity, 1));
+.btn-neutral {
+  --solid-bg-color: #57616A;
+  --solid-text-color: #131920;
+  --solid-border-color: #57616A;
+  --solid-hover-color: #a3a3a3;
+  --outline-bg-color: #fff;
+  --outline-text-color: #131920;
+  --outline-border-color: #E1E2E5;
+  --outline-hover-color: #E7EDF0;
 }
 
-.btn-brand:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(80 178 167 / var(--tw-bg-opacity, 1));
+.btn-solid {
+  /* hover:bg-brand-600 focus:bg-brand-500 */
+  border-color: var(--solid-border-color);
+  background-color: var(--solid-bg-color);
+  color: var(--solid-text-color);
+}
+
+.btn-solid:hover {
+  border-color: var(--solid-hover-color);
+  background-color: var(--solid-hover-color);
+}
+
+.btn-outline {
+  border-color: var(--outline-border-color);
+  background-color: var(--outline-bg-color);
+  color: var(--outline-text-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--outline-hover-color);
 }
 
 @keyframes scroll-left {
@@ -711,6 +743,11 @@ video {
   position: sticky;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .-end-0 {
   inset-inline-end: -0px;
 }
@@ -729,10 +766,6 @@ video {
 
 .left-0 {
   left: 0px;
-}
-
-.left-3 {
-  left: 0.75rem;
 }
 
 .left-8 {
@@ -808,8 +841,8 @@ video {
   margin-bottom: 2rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
+.ms-auto {
+  margin-inline-start: auto;
 }
 
 .mt-4 {
@@ -901,12 +934,16 @@ video {
   width: 100%;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
+.max-w-24 {
+  max-width: 6rem;
 }
 
 .flex-shrink {
   flex-shrink: 1;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .transform {
@@ -923,6 +960,10 @@ video {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1108,11 +1149,6 @@ video {
   background-color: rgb(243 248 252 / var(--tw-bg-opacity, 1));
 }
 
-.bg-brand-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 162 196 / var(--tw-bg-opacity, 1));
-}
-
 .bg-brand-700\/10 {
   background-color: rgb(34 162 196 / 0.1);
 }
@@ -1279,10 +1315,6 @@ video {
 .py-\[var\(--section-padding\)\] {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
 }
 
 .pt-16 {
@@ -1495,14 +1527,9 @@ body {
   background-color: rgb(7 53 83 / 0.4);
 }
 
-.hover\:bg-brand-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 244 255 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-brand-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 165 152 / var(--tw-bg-opacity, 1));
+.focus-within\:border-neutral-200:focus-within {
+  --tw-border-opacity: 1;
+  border-color: rgb(116 124 132 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-gray-100:hover {
@@ -1520,9 +1547,8 @@ body {
   border-color: rgb(34 162 196 / var(--tw-border-opacity, 1));
 }
 
-.focus\:bg-brand-500:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(80 178 167 / var(--tw-bg-opacity, 1));
+.focus\:border-transparent:focus {
+  border-color: transparent;
 }
 
 .focus\:outline-none:focus {
@@ -1539,6 +1565,11 @@ body {
 .focus\:ring-brand-700:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(34 162 196 / var(--tw-ring-opacity, 1));
+}
+
+.focus-visible\:outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .peer:checked ~ .peer-checked\:bg-secondary-900 {
@@ -1570,8 +1601,8 @@ body {
     display: none;
   }
 
-  .md\:w-\[400px\] {
-    width: 400px;
+  .md\:w-\[18rem\] {
+    width: 18rem;
   }
 
   .md\:grid-cols-2 {

@@ -17,74 +17,67 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="أكاديمية نمو" />
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare
   </head>
   <body>
     <!-- Navbar -->
-    <header class="bg-white fixed w-full top-0 left-0 z-50">
-      <div class="container py-3 flex justify-between items-center">
-        <a href="/" class=""><img src="logo.png" alt="Logo" /></a>
+    <nav class="bg-white sticky w-full top-0 inset-x-0 z-50">
+      <div class="container py-3 flex gap-4 items-center">
+        <a href="/" class=""
+          ><img src="logo.png" alt="Logo" class="max-w-24"
+        /></a>
         <button
           id="menu-toggle"
           class="md:hidden text-gray-700 focus:outline-none"
         >
           ☰
         </button>
-        <nav>
-          <ul
-            class="hidden md:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
-          >
-            <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
-            <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
-            <li><a href="#" class="hover:text-brand-700">تواصل معنا</a></li>
-            <li>
-              <a href="#" class="hover:text-brand-700">الجدول التدريبي</a>
-            </li>
-          </ul>
-        </nav>
+        <ul
+          class="hidden md:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
+        >
+          <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
+          <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
+          <li><a href="#" class="hover:text-brand-700">تواصل معنا</a></li>
+          <li>
+            <a href="#" class="hover:text-brand-700">الجدول التدريبي</a>
+          </li>
+        </ul>
 
         <!-- Search Bar -->
-        <div class="relative flex items-center md:w-[400px]">
+        <div
+          class="flex ms-auto items-center md:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+        >
           <input
             type="text"
             placeholder="ابحث عن دورة او برنامج"
-            class="border flex-1 border-neutral-100 rounded-full py-4 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+            class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
           />
-          <img
-            src="images/icons/search.svg"
-            alt="Search"
-            class="absolute left-3"
-          />
+          <img src="images/icons/search.svg" alt="Search" />
         </div>
 
         <!-- Buttons -->
-        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+        <div class="flex gap-4 items-center">
+          <button class="btn btn-neutral btn-outline">تسجيل الدخول</button>
+          <button class="btn btn-brand btn-solid">انضم الآن</button>
+        </div>
+        <!-- Bag Icon Button -->
+        <div class="relative">
           <button
-            class="font-bold border border-neutral-100 rounded-full px-6 py-4 hover:bg-brand-50 focus:outline-none"
+            class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
           >
-            تسجيل الدخول
-          </button>
-          <button
-            class="font-bold bg-brand-700 hover:bg-brand-600 focus:bg-brand-500 text-white rounded-full px-6 py-4"
-          >
-            انضم الآن
-          </button>
-
-          <!-- Bag Icon Button -->
-          <div class="relative">
-            <button
-              class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            <img src="images/icons/bag.svg" alt="bag" />
+            <!-- Notification Badge -->
+            <span
+              class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
             >
-              <img src="images/icons/bag.svg" alt="bag" />
-              <!-- Notification Badge -->
-              <span
-                class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
-              >
-                3
-              </span>
-            </button>
-          </div>
+              3
+            </span>
+          </button>
         </div>
       </div>
       <ul
@@ -104,9 +97,9 @@
           <a href="#" class="block py-2 px-4 hover:bg-gray-100">تواصل معنا</a>
         </li>
       </ul>
-    </header>
+    </nav>
 
-    <main class="mt-32">
+    <main>
       <!-- start section 1 -->
       <section
         class="bg-center bg-cover bg-no-repeat"
@@ -127,7 +120,7 @@
                 دبلومات ودورات متقدمة بمعايير عالمية لتنمية المهارات ورفع
                 الكفاءة , انطلاقاً من ايماننا بأن التطوير المهني أساس التمكين
               </p>
-              <button class="btn btn-brand">
+              <button class="btn btn-brand btn-solid">
                 <span>تعلم الآن</span>
                 <svg
                   width="20"
@@ -292,7 +285,7 @@
             تعلّم مع أفضل المدربين بتقنيات حديثة ومحتوى يواكب سوق العمل ,لتناسب
             وقتك وتطّور مستقبلك المهني
           </p>
-          <button class="btn btn-brand">
+          <button class="btn btn-brand btn-solid">
             <span>ابدأ التغيير </span>
             <svg
               width="20"
@@ -367,7 +360,7 @@
               <h3 class="font-medium text-xl text-center">شهادة معتمدة</h3>
             </article>
           </div>
-          <button class="btn btn-brand mx-auto">
+          <button class="btn btn-brand btn-solid mx-auto">
             <span>ابدأ معنا رحلة النجاح </span>
             <svg
               width="20"
@@ -458,521 +451,532 @@
           </div>
         </div>
         <!-- slider -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
-          <article
-            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
-          >
-            <div
-              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
-            >
-              <img
-                src="images/training-program-img1.png"
-                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <span class="text-lg text-brand-600 font-bold">399</span>
-            <h3 class="text-neutral-900 font-bold mb-6">
-              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
-            </h3>
-            <div class="flex items-center gap-2">
-              <p
-                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+        <div
+          id="trainig-program-carousel"
+          class="owl-carousel owl-theme owl-loaded"
+        >
+          <div class="owl-stage-outer">
+            <div class="wl-stage grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <article
+                class="owl-item border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
                 >
-                  <path
-                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <img
+                    src="images/training-program-img1.png"
+                    alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                    class="h-full w-full object-cover"
                   />
-                  <path
-                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                </div>
+                <span class="text-lg text-brand-600 font-bold">399</span>
+                <h3 class="text-neutral-900 font-bold mb-6">
+                  دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+                </h3>
+                <div class="flex items-center gap-2">
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
 
-                <span>22 ساعة</span>
-              </p>
-              <p
-                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                    <span>22 ساعة</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.3335 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6665 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.8332 11.7334H2.1665"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                        fill="#073553"
+                        style="
+                          fill: #073553;
+                          fill: color(display-p3 0.0275 0.2078 0.3255);
+                          fill-opacity: 1;
+                        "
+                      />
+                    </svg>
+
+                    <span>6 أشهر</span>
+                  </p>
+                </div>
+              </article>
+              <article
+                class="owl-item border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
                 >
-                  <path
-                    d="M5.3335 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <img
+                    src="images/training-program-img2.png"
+                    alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                    class="h-full w-full object-cover"
                   />
-                  <path
-                    d="M10.6665 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.8332 11.7334H2.1665"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
-                    fill="#073553"
-                    style="
-                      fill: #073553;
-                      fill: color(display-p3 0.0275 0.2078 0.3255);
-                      fill-opacity: 1;
-                    "
-                  />
-                </svg>
+                </div>
+                <span class="text-lg text-brand-600 font-bold">399</span>
+                <h3 class="text-neutral-900 font-bold mb-6">
+                  دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+                </h3>
+                <div class="flex items-center gap-2">
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
 
-                <span>6 أشهر</span>
-              </p>
-            </div>
-          </article>
-          <article
-            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
-          >
-            <div
-              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
-            >
-              <img
-                src="images/training-program-img2.png"
-                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <span class="text-lg text-brand-600 font-bold">399</span>
-            <h3 class="text-neutral-900 font-bold mb-6">
-              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
-            </h3>
-            <div class="flex items-center gap-2">
-              <p
-                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+                    <span>22 ساعة</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.3335 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6665 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.8332 11.7334H2.1665"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                        fill="#073553"
+                        style="
+                          fill: #073553;
+                          fill: color(display-p3 0.0275 0.2078 0.3255);
+                          fill-opacity: 1;
+                        "
+                      />
+                    </svg>
+
+                    <span>6 أشهر</span>
+                  </p>
+                </div>
+              </article>
+              <article
+                class="owl-item border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
                 >
-                  <path
-                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <img
+                    src="images/training-program-img3.png"
+                    alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                    class="h-full w-full object-cover"
                   />
-                  <path
-                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                </div>
+                <span class="text-lg text-brand-600 font-bold">399</span>
+                <h3 class="text-neutral-900 font-bold mb-6">
+                  دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+                </h3>
+                <div class="flex items-center gap-2">
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
 
-                <span>22 ساعة</span>
-              </p>
-              <p
-                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                    <span>22 ساعة</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.3335 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6665 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.8332 11.7334H2.1665"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                        fill="#073553"
+                        style="
+                          fill: #073553;
+                          fill: color(display-p3 0.0275 0.2078 0.3255);
+                          fill-opacity: 1;
+                        "
+                      />
+                    </svg>
+
+                    <span>6 أشهر</span>
+                  </p>
+                </div>
+              </article>
+              <article
+                class="owl-item border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
                 >
-                  <path
-                    d="M5.3335 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <img
+                    src="images/training-program-img4.png"
+                    alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                    class="h-full w-full object-cover"
                   />
-                  <path
-                    d="M10.6665 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.8332 11.7334H2.1665"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
-                    fill="#073553"
-                    style="
-                      fill: #073553;
-                      fill: color(display-p3 0.0275 0.2078 0.3255);
-                      fill-opacity: 1;
-                    "
-                  />
-                </svg>
+                </div>
+                <span class="text-lg text-brand-600 font-bold">399</span>
+                <h3 class="text-neutral-900 font-bold mb-6">
+                  دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+                </h3>
+                <div class="flex items-center gap-2">
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                        stroke="#22A2C4"
+                        style="
+                          stroke: #22a2c4;
+                          stroke: color(display-p3 0.1333 0.6353 0.7686);
+                          stroke-opacity: 1;
+                        "
+                        stroke-width="1.11111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
 
-                <span>6 أشهر</span>
-              </p>
-            </div>
-          </article>
-          <article
-            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
-          >
-            <div
-              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
-            >
-              <img
-                src="images/training-program-img3.png"
-                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <span class="text-lg text-brand-600 font-bold">399</span>
-            <h3 class="text-neutral-900 font-bold mb-6">
-              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
-            </h3>
-            <div class="flex items-center gap-2">
-              <p
-                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                    <span>22 ساعة</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.3335 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6665 1.33325V3.33325"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.8332 11.7334H2.1665"
+                        stroke="#073553"
+                        style="
+                          stroke: #073553;
+                          stroke: color(display-p3 0.0275 0.2078 0.3255);
+                          stroke-opacity: 1;
+                        "
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                        fill="#073553"
+                        style="
+                          fill: #073553;
+                          fill: color(display-p3 0.0275 0.2078 0.3255);
+                          fill-opacity: 1;
+                        "
+                      />
+                    </svg>
 
-                <span>22 ساعة</span>
-              </p>
-              <p
-                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.3335 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6665 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.8332 11.7334H2.1665"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
-                    fill="#073553"
-                    style="
-                      fill: #073553;
-                      fill: color(display-p3 0.0275 0.2078 0.3255);
-                      fill-opacity: 1;
-                    "
-                  />
-                </svg>
-
-                <span>6 أشهر</span>
-              </p>
+                    <span>6 أشهر</span>
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-          <article
-            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
-          >
-            <div
-              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
-            >
-              <img
-                src="images/training-program-img4.png"
-                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
-                class="h-full w-full object-cover"
-              />
+            <div class="owl-nav">
+              <div class="owl-prev">prev</div>
+              <div class="owl-next">next</div>
             </div>
-            <span class="text-lg text-brand-600 font-bold">399</span>
-            <h3 class="text-neutral-900 font-bold mb-6">
-              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
-            </h3>
-            <div class="flex items-center gap-2">
-              <p
-                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
-                    stroke="#22A2C4"
-                    style="
-                      stroke: #22a2c4;
-                      stroke: color(display-p3 0.1333 0.6353 0.7686);
-                      stroke-opacity: 1;
-                    "
-                    stroke-width="1.11111"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-
-                <span>22 ساعة</span>
-              </p>
-              <p
-                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.3335 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6665 1.33325V3.33325"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.8332 11.7334H2.1665"
-                    stroke="#073553"
-                    style="
-                      stroke: #073553;
-                      stroke: color(display-p3 0.0275 0.2078 0.3255);
-                      stroke-opacity: 1;
-                    "
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
-                    fill="#073553"
-                    style="
-                      fill: #073553;
-                      fill: color(display-p3 0.0275 0.2078 0.3255);
-                      fill-opacity: 1;
-                    "
-                  />
-                </svg>
-
-                <span>6 أشهر</span>
-              </p>
-            </div>
-          </article>
+          </div>
         </div>
-        <button class="btn btn-brand mx-auto">
+        <button class="btn btn-brand btn-solid mx-auto">
           <span>استعراض كل البرامج </span>
         </button>
       </section>
@@ -2174,8 +2178,29 @@
       </div>
     </footer>
 
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $("#trainig-program-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
   </body>
   <script type="module" src="js/main.js"></script>
 </html>
