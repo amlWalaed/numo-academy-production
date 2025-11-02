@@ -27,18 +27,16 @@
   <body>
     <!-- Navbar -->
     <nav class="bg-white sticky w-full top-0 inset-x-0 z-50">
-      <div class="container py-3 flex gap-4 items-center">
+      <div
+        class="container py-3 flex justify-between xl:justify-normal gap-4 items-center"
+      >
         <a href="/" class=""
           ><img src="logo.png" alt="Logo" class="max-w-24"
         /></a>
-        <button
-          id="menu-toggle"
-          class="md:hidden text-gray-700 focus:outline-none"
-        >
-          ☰
-        </button>
+
+        <!-- Desktop Navigation Links -->
         <ul
-          class="hidden md:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
+          class="hidden xl:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
         >
           <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
           <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
@@ -48,9 +46,9 @@
           </li>
         </ul>
 
-        <!-- Search Bar -->
+        <!-- Desktop Search Bar -->
         <div
-          class="flex ms-auto items-center md:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+          class="hidden xl:flex ms-auto items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
         >
           <input
             type="text"
@@ -60,17 +58,18 @@
           <img src="images/icons/search.svg" alt="Search" />
         </div>
 
-        <!-- Buttons -->
-        <div class="flex gap-4 items-center">
+        <!-- Desktop Buttons (Hidden on mobile) -->
+        <div class="hidden xl:flex gap-4 items-center">
           <button class="btn btn-neutral btn-outline">تسجيل الدخول</button>
           <button class="btn btn-brand btn-solid">انضم الآن</button>
         </div>
-        <!-- Bag Icon Button -->
-        <div class="relative">
+
+        <!-- Desktop Bag Icon Button -->
+        <div class="hidden xl:block relative">
           <button
-            class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            class="bg-secondary-50 rounded-full p-3 focus:outline-none"
           >
-            <img src="images/icons/bag.svg" alt="bag" />
+            <img src="images/icons/bag.svg" alt="bag" width="24" />
             <!-- Notification Badge -->
             <span
               class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
@@ -79,24 +78,85 @@
             </span>
           </button>
         </div>
+
+        <!-- Burger Menu Button (Visible on mobile) -->
+        <div class="xl:hidden flex gap-5">
+          <div class="relative">
+            <button
+              class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            >
+              <img src="images/icons/bag.svg" alt="bag" />
+              <!-- Notification Badge -->
+              <span
+                class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+              >
+                3
+              </span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="text-gray-700 text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
       </div>
-      <ul
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-gray-200 text-gray-700"
+
+      <!-- Side Drawer Menu (Hidden by default, shown on mobile when toggled) -->
+      <div
+        id="side-drawer"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden z-50"
       >
-        <li>
-          <a href="#" class="block py-2 px-4 hover:bg-gray-100">الرئيسية</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 hover:bg-gray-100">الدورات</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 hover:bg-gray-100">من نحن</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 hover:bg-gray-100">تواصل معنا</a>
-        </li>
-      </ul>
+        <div class="p-4">
+          <!-- Close Button -->
+          <button id="close-drawer" class="text-gray-700 text-2xl mb-4">
+            &times;
+          </button>
+
+          <!-- Drawer search -->
+          <div
+            class="flex xl:hidden ms-auto mb-4 items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+          >
+            <input
+              type="text"
+              placeholder="ابحث عن دورة او برنامج"
+              class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
+            />
+            <img src="images/icons/search.svg" alt="Search" />
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="space-y-4 text-gray-700 font-medium border-b pb-4 mb-4">
+            <li>
+              <a href="#" class="block hover:text-brand-700">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">برامجنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">تواصل معنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">الجدول التدريبي</a>
+            </li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-neutral btn-outline justify-center">
+              تسجيل الدخول
+            </button>
+            <button class="btn btn-brand btn-solid justify-center">انضم الآن</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay for the side drawer -->
+      <div
+        id="drawer-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden xl:hidden z-40"
+      ></div>
     </nav>
 
     <main>
@@ -1026,7 +1086,7 @@
 
       <!-- start section 5 -->
       <section class="container flex justify-center py-12">
-        <div class="w-full grid md:grid-cols-2 gap-8">
+        <div class="w-full grid lg:grid-cols-2 gap-8">
           <!-- Card 1 -->
           <div
             class="rounded-3xl bg-gradient-to-b from-[#DEEDF7] to-white py-10 flex flex-col items-center text-center"
@@ -1043,16 +1103,16 @@
             <p class="text-5xl font-extrabold text-secondary-900 mb-2">2000+</p>
             <p class="text-[#131920] mb-7">عدد الخريجين حتى الآن</p>
 
-            <div>
-              <div class="flex gap-2 items-center mb-2">
+            <div class="text-start pr-5 sm:pr-20 pl-5">
+              <div class="flex gap-1 items-start mb-2">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>شهادة معتمدة تؤههلك لتوظيف الحكومي والخاص</p>
               </div>
-              <div class="flex gap-2 items-center mb-2">
+              <div class="flex gap-1 items-start mb-2">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>تخصصات متنوعة مواكبة لسوق العمل</p>
               </div>
-              <div class="flex gap-2 items-center">
+              <div class="flex gap-1 items-start">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>تعليم عن بعد وحضوري</p>
               </div>
@@ -1074,16 +1134,16 @@
             <p class="text-5xl font-extrabold text-brand-700 mb-2">5000+</p>
             <p class="text-[#131920] mb-7">طالب حالي</p>
 
-            <div>
-              <div class="flex gap-2 items-center mb-2">
+            <div class="text-start pr-5 sm:pr-20 pl-5">
+              <div class="flex gap-1 items-start mb-2">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>منصة تعليم تفاعلية</p>
               </div>
-              <div class="flex gap-2 items-center mb-2">
+              <div class="flex gap-1 items-start mb-2">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>تعليم مرن</p>
               </div>
-              <div class="flex gap-2 items-center">
+              <div class="flex gap-1 items-start">
                 <img src="images/icons/check.svg" alt="check" />
                 <p>دعم فني وأكاديمي لخدمتك</p>
               </div>
@@ -2190,11 +2250,11 @@
         <!-- Footer Logo and Links -->
         <div class="flex flex-col items-center space-y-10">
           <img src="footer-logo.png" alt="Footer Logo" />
-          <div class="flex gap-6 flex-wrap">
-            <a href="#" class="hover:text-brand-700">الشروط والاحكام</a>
-            <a href="#" class="hover:text-brand-700">تعلم معنا</a>
-            <a href="#" class="hover:text-brand-700">التسجيل</a>
-            <a href="#" class="hover:text-brand-700">تواصل معنا</a>
+          <div class="text-start text-sm sm:flex sm:space-x-6 rtl:space-x-reverse">
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700">الشروط والاحكام</a>
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700">تعلم معنا</a>
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700">التسجيل</a>
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700">تواصل معنا</a>
           </div>
         </div>
 
