@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أكاديمية نمو</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="أكاديمية نمو" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="container bg-white fixed w-full top-0 left-0 z-50">
+      <div class="mx-auto py-3 flex justify-between items-center">
+        <a href="/" class=""><img src="logo.png" alt="Logo" /></a>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          ☰
+        </button>
+        <nav>
+          <ul
+            class="hidden md:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
+          >
+            <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
+            <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
+            <li><a href="#" class="hover:text-brand-700">تواصل معنا</a></li>
+            <li>
+              <a href="#" class="hover:text-brand-700">الجدول التدريبي</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="relative flex items-center md:w-[400px]">
+          <input
+            type="text"
+            placeholder="ابحث عن دورة او برنامج"
+            class="border flex-1 border-neutral-100 rounded-full py-4 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+          />
+          <img
+            src="images/icons/search.svg"
+            alt="Search"
+            class="absolute left-3"
+          />
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="font-bold border border-neutral-100 rounded-full px-6 py-4 hover:bg-brand-50 focus:outline-none"
+          >
+            تسجيل الدخول
+          </button>
+          <button
+            class="font-bold bg-brand-700 text-white rounded-full px-6 py-4 focus:outline-none"
+          >
+            انضم الآن
+          </button>
+
+          <!-- Bag Icon Button -->
+          <div class="relative">
+            <button
+              class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            >
+              <img src="images/icons/bag.svg" alt="bag" />
+              <!-- Notification Badge -->
+              <span
+                class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+              >
+                3
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200 text-gray-700"
+      >
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100">الرئيسية</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100">الدورات</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100">من نحن</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100">تواصل معنا</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <!-- start section 1 -->
+      <section
+        class="bg-center bg-cover bg-no-repeat"
+        style="background-image: url('/public/images/hero-bg.png')"
+      >
+        <div class="from-transparent to-white bg-gradient-to-b">
+          <div
+            class="container grid lg:grid-cols-2 gap-6 min-h-[var(--section-min-height)] py-[var(--section-padding)]"
+          >
+            <div class="space-y-8 content-center">
+              <p class="text-brand-700 text-2xl leading-10 font-extrabold">
+                معًا، نصنع جيلًا مبدعًا قادرًا على قيادة التغيير وصناعة المستقبل
+              </p>
+              <h1 class="font-extrabold text-5xl text-neutral-900">
+                من التعلّم إلى التمكين
+              </h1>
+              <p class="text-neutral-300 text-lg">
+                دبلومات ودورات متقدمة بمعايير عالمية لتنمية المهارات ورفع
+                الكفاءة , انطلاقاً من ايماننا بأن التطوير المهني أساس التمكين
+              </p>
+              <button class="btn btn-brand">
+                <span>تعلم الآن</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.8332 10H4.1665M4.1665 10L9.1665 15M4.1665 10L9.1665 5"
+                    stroke="white"
+                    style="stroke: white; stroke-opacity: 1"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="relative flex flex-col gap-6">
+              <img
+                class="max-lg:hidden"
+                role="presentation"
+                src="/public/images/hero-img.png"
+              />
+              <p
+                class="text-neutral-900 backdrop-blur-lg py-4 px-6 rounded-full font-bold bg-white/45 w-fit flex items-center gap-4 top-[20%] -start-[10%] lg:absolute"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 15C4.309 15 3 13.691 3 11C3 8.309 4.309 7 7 7C9.691 7 11 8.309 11 11C11 13.691 9.691 15 7 15ZM7 16C2.851 16 1 17.851 1 22C1 22.553 1.448 23 2 23H12C12.552 23 13 22.553 13 22C13 17.851 11.149 16 7 16ZM22.15 2.501C22.052 2.201 21.818 1.966 21.521 1.865C21.417 1.83 18.908 1 14 1C9.092 1 6.583 1.83 6.479 1.865C6.181 1.966 5.948 2.201 5.85 2.501C5.828 2.568 5.496 3.601 5.253 5.201C5.795 5.083 6.366 5 7 5C10.813 5 13 7.187 13 11C13 12.712 12.552 14.09 11.721 15.096C12.153 15.348 12.547 15.64 12.895 15.977C13.256 15.987 13.608 16 14 16C18.908 16 21.417 15.17 21.521 15.135C21.819 15.034 22.052 14.799 22.15 14.499C22.185 14.394 23 11.871 23 8.5C23 5.129 22.185 2.606 22.15 2.501ZM19.133 13.749C18.533 13.84 17.858 13.925 17.109 13.996C16.558 14.05 16.057 13.652 16.006 13.108C15.953 12.565 16.362 12.082 16.919 12.03C17.626 11.963 18.261 11.883 18.827 11.797C19.381 11.71 19.897 12.082 19.982 12.621C20.066 13.16 19.687 13.665 19.134 13.749H19.133Z"
+                    fill="#32A598"
+                    style="
+                      fill: #32a598;
+                      fill: color(display-p3 0.1961 0.6471 0.5961);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span> كادر تعليمي احترافي </span>
+              </p>
+              <p
+                class="text-neutral-900 backdrop-blur-lg py-4 px-6 rounded-full font-bold bg-white/45 w-fit flex items-center gap-4 top-[50%] -end-0 lg:absolute"
+              >
+                <svg
+                  width="20"
+                  height="24"
+                  viewBox="0 0 20 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.976 9H14C12.346 9 11 7.654 11 6V0.024C10.839 0.013 9.678 0 9.515 0H5C2.243 0 0 2.243 0 5V19C0 21.757 2.243 24 5 24H15C17.757 24 20 21.757 20 19V9.485C20 9.322 19.987 9.161 19.976 9ZM7 4.999C8.105 4.999 9 5.894 9 6.999C9 8.104 8.105 8.999 7 8.999C5.895 8.999 5 8.104 5 6.999C5 5.894 5.895 4.999 7 4.999ZM4.256 11.391C4.365 11.248 5.369 9.999 7.026 9.999C8.683 9.999 9.685 11.249 9.795 11.391C10.131 11.829 10.048 12.457 9.609 12.793C9.427 12.932 9.213 12.999 9.002 12.999C8.701 12.999 8.404 12.864 8.207 12.607C8.207 12.607 7.71 11.999 7.026 11.999C6.342 11.999 5.849 12.601 5.844 12.607C5.508 13.046 4.882 13.13 4.442 12.793C4.004 12.458 3.921 11.83 4.256 11.391ZM15 21H5C4.447 21 4 20.552 4 20C4 19.448 4.447 19 5 19H15C15.553 19 16 19.448 16 20C16 20.552 15.553 21 15 21ZM15 17H5C4.447 17 4 16.552 4 16C4 15.448 4.447 15 5 15H15C15.553 15 16 15.448 16 16C16 16.552 15.553 17 15 17ZM14 7C13.448 7 13 6.552 13 6V0.942C13.527 1.244 14.023 1.608 14.465 2.049L17.949 5.535C18.391 5.976 18.755 6.472 19.057 6.999L14 7Z"
+                    fill="#32A598"
+                    style="
+                      fill: #32a598;
+                      fill: color(display-p3 0.1961 0.6471 0.5961);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>برامج متنوعة تقوي السيرة الذاتية</span>
+              </p>
+              <p
+                class="text-neutral-900 backdrop-blur-lg py-4 px-6 rounded-full font-bold bg-white/45 w-fit flex items-center gap-4 top-[65%] -start-0 lg:absolute"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.226 6.9C21.114 6.582 20.848 6.343 20.521 6.263C20.415 6.237 18.73 5.833 16.304 5.557V5.303C16.304 2.93 14.373 1 12 1C9.62703 1 7.69703 2.931 7.69703 5.303V5.557C5.27303 5.832 3.58603 6.236 3.48003 6.262C3.15103 6.342 2.88403 6.583 2.77303 6.903C2.73903 7 2.14603 8.72 1.83203 11.285C3.12503 11.557 7.31103 12.353 12.001 12.353C16.691 12.353 20.878 11.556 22.171 11.285C21.857 8.706 21.26 6.996 21.226 6.9ZM10.696 5.329V5.303C10.696 4.584 11.28 4 11.999 4C12.718 4 13.303 4.584 13.303 5.303V5.329C12.877 5.313 12.441 5.304 11.999 5.304C11.557 5.304 11.122 5.313 10.696 5.329Z"
+                    fill="#32A598"
+                    style="
+                      fill: #32a598;
+                      fill: color(display-p3 0.1961 0.6471 0.5961);
+                      fill-opacity: 1;
+                    "
+                  />
+                  <path
+                    d="M12.9992 14.34V15.523C12.9992 16.075 12.5522 16.522 12.0002 16.522C11.4482 16.522 11.0012 16.075 11.0012 15.523V14.34C6.76516 14.248 3.14216 13.596 1.66416 13.293C1.64816 13.65 1.63916 14.016 1.63916 14.391C1.63916 18.627 2.72716 21.273 2.77416 21.404C2.88716 21.722 3.15216 21.962 3.48016 22.041C3.64016 22.08 7.47116 23 12.0012 23C16.5312 23 20.3602 22.08 20.5222 22.041C20.8512 21.961 21.1172 21.72 21.2292 21.4C21.2752 21.268 22.3622 18.59 22.3622 14.39C22.3622 14.015 22.3532 13.648 22.3382 13.291C20.8592 13.594 17.2302 14.246 13.0002 14.339L12.9992 14.34Z"
+                    fill="#32A598"
+                    style="
+                      fill: #32a598;
+                      fill: color(display-p3 0.1961 0.6471 0.5961);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>تأهيل لسوق العمل</span>
+              </p>
+              <p
+                class="text-neutral-900 backdrop-blur-lg py-4 px-6 rounded-full font-bold bg-white/45 w-fit flex items-center gap-4 bottom-0 start-20 lg:absolute"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_11_16)">
+                    <path
+                      d="M8.5 11C8.5 8.794 6.706 7 4.5 7C2.294 7 0.5 8.794 0.5 11C0.5 12.255 1.093 13.363 2 14.097V18.847C2 19.47 2.791 19.737 3.169 19.242L4.5 17.499L5.831 19.242C6.209 19.737 7 19.47 7 18.847V14.097C7.907 13.363 8.5 12.255 8.5 11ZM24 10.485V19C24 21.757 21.757 24 19 24H9C6.897 24 5.101 22.691 4.364 20.849C4.407 20.812 4.459 20.789 4.5 20.749C4.999 21.235 5.664 21.5 6.348 21.5C6.632 21.5 6.919 21.455 7.199 21.36C8.227 21.011 8.926 20.074 8.988 19.001H18C18.552 19.001 19 18.554 19 18.001C19 17.448 18.552 17.001 18 17.001H9V15.001H18C18.552 15.001 19 14.554 19 14.001C19 13.448 18.552 13.001 18 13.001H10.142C10.371 12.366 10.5 11.693 10.5 11.001C10.5 7.692 7.809 5.001 4.5 5.001C4.331 5.001 4.165 5.013 4 5.026V5.001C4 2.243 6.243 0 9 0H13.515C13.678 0 13.839 0.013 14 0.024V7C14 8.654 15.346 10 17 10H23.976C23.987 10.161 24 10.322 24 10.485ZM16 7V0.46C16.913 0.806 17.753 1.339 18.465 2.05L21.949 5.536C22.661 6.247 23.194 7.087 23.54 8H17C16.448 8 16 7.551 16 7Z"
+                      fill="#32A598"
+                      style="
+                        fill: #32a598;
+                        fill: color(display-p3 0.1961 0.6471 0.5961);
+                        fill-opacity: 1;
+                      "
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_11_16">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        style="fill: white; fill-opacity: 1"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span>شهادة معتمدة بالتوظيف الحكومي والخاص</span>
+              </p>
+            </div>
+          </div>
+          <img
+            role="presentation"
+            src="/public/images/hero-bg2.png"
+            class="absolute bottom-0 start-0"
+          />
+        </div>
+      </section>
+      <!-- end section 1  -->
+
+      <!-- start section 2 -->
+      <section
+        class="py-[var(--section-padding)] container grid lg:grid-cols-2 gap-16 items-center"
+      >
+        <div>
+          <img role="presentation" src="/public/images/start-change-img.png" />
+        </div>
+        <article class="space-y-6">
+          <h2 class="section-title font-extrabold">
+            منصة أكاديمية متكاملة مصممة لتواكب احتياجك
+          </h2>
+          <p class="text-neutral-300 text-pretty">
+            تعلّم مع أفضل المدربين بتقنيات حديثة ومحتوى يواكب سوق العمل ,لتناسب
+            وقتك وتطّور مستقبلك المهني
+          </p>
+          <button class="btn btn-brand">
+            <span>ابدأ التغيير </span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8332 10H4.1665M4.1665 10L9.1665 15M4.1665 10L9.1665 5"
+                stroke="white"
+                style="stroke: white; stroke-opacity: 1"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </article>
+      </section>
+      <!-- end section 2 -->
+
+      <!-- start section 3 -->
+      <section
+        class="py-[var(--section-padding)] bg-no-repeat bg-cover bg-center"
+        style="
+          background-image: url('/public/images/with-us-we-make-different-bg.jpg');
+        "
+      >
+        <div class="container space-y-[var(--section-space)]">
+          <h2 class="section-title font-bold text-center">معك لتصنع الفرق</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <article
+              class="flex flex-col items-center justify-center rounded-2xl bg-white p-6 gap-4"
+            >
+              <div>
+                <img
+                  role="presentation"
+                  src="/public/images/diploma-and-program-img.png"
+                />
+              </div>
+              <h3 class="font-medium text-xl text-center">
+                دبلومات وبرامج تدريبية تطورك مهنيا
+              </h3>
+            </article>
+            <article
+              class="flex flex-col items-center justify-center rounded-2xl bg-white p-6 gap-4"
+            >
+              <div>
+                <img
+                  role="presentation"
+                  src="/public/images/online-training-courses.png"
+                />
+              </div>
+              <h3 class="font-medium text-xl text-center">كادر تعليمي متميز</h3>
+            </article>
+            <article
+              class="flex flex-col items-center justify-center rounded-2xl bg-white p-6 gap-4"
+            >
+              <div>
+                <img
+                  role="presentation"
+                  src="/public/images/flexible-teaching.png"
+                />
+              </div>
+              <h3 class="font-medium text-xl text-center">تعليم مرن</h3>
+            </article>
+            <article
+              class="flex flex-col items-center justify-center rounded-2xl bg-white p-6 gap-4"
+            >
+              <div>
+                <img
+                  role="presentation"
+                  src="/public/images/certifications-issurance.png"
+                />
+              </div>
+              <h3 class="font-medium text-xl text-center">شهادة معتمدة</h3>
+            </article>
+          </div>
+          <button class="btn btn-brand mx-auto">
+            <span>ابدأ معنا رحلة النجاح </span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8332 10H4.1665M4.1665 10L9.1665 15M4.1665 10L9.1665 5"
+                stroke="white"
+                style="stroke: white; stroke-opacity: 1"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- end section 3 -->
+
+      <!-- start section 4 -->
+      <section
+        class="py-[var(--section-padding)] container space-y-[var(--section-space)]"
+      >
+        <h2 class="section-title font-bold text-center">البرامج التدريبية</h2>
+        <!-- tabs buttons -->
+        <div
+          class="bg-secondary-50 px-2 py-3 rounded-full flex items-center justify-center mx-auto w-fit gap-2.5"
+        >
+          <div>
+            <input
+              type="radio"
+              value="all"
+              id="all"
+              name="tab"
+              checked
+              class="hidden peer"
+            />
+            <label
+              class="px-6 py-2 font-medium cursor-pointer rounded-full peer-checked:bg-secondary-900 peer-checked:text-white text-secondary-900 bg-transparent transition-colors duration-500"
+              for="all"
+              >الكل
+            </label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              value="diploma"
+              id="diploma"
+              name="tab"
+              class="hidden peer"
+            />
+            <label
+              class="px-6 py-2 font-medium cursor-pointer rounded-full peer-checked:bg-secondary-900 peer-checked:text-white text-secondary-900 bg-transparent transition-colors duration-500"
+              for="diploma"
+              >دبلومات</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              value="offline-courses"
+              id="offline-courses"
+              name="tab"
+              class="hidden peer"
+            />
+            <label
+              class="px-6 py-2 font-medium cursor-pointer rounded-full peer-checked:bg-secondary-900 peer-checked:text-white text-secondary-900 bg-transparent transition-colors duration-500"
+              for="offline-courses"
+              >دورات حضورية</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              value="online-courses"
+              id="online-courses"
+              name="tab"
+              class="hidden peer"
+            />
+            <label
+              class="px-6 py-2 font-medium cursor-pointer rounded-full peer-checked:bg-secondary-900 peer-checked:text-white text-secondary-900 bg-transparent transition-colors duration-500"
+              for="online-courses"
+              >دورات عن بعد</label
+            >
+          </div>
+        </div>
+        <!-- slider -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <article
+            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
+          >
+            <div
+              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
+            >
+              <img
+                src="/public/images/training-program-img1.png"
+                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <span class="text-lg text-brand-600 font-bold">399</span>
+            <h3 class="text-neutral-900 font-bold mb-6">
+              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+            </h3>
+            <div class="flex items-center gap-2">
+              <p
+                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>22 ساعة</span>
+              </p>
+              <p
+                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.3335 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6665 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.8332 11.7334H2.1665"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                    fill="#073553"
+                    style="
+                      fill: #073553;
+                      fill: color(display-p3 0.0275 0.2078 0.3255);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>6 أشهر</span>
+              </p>
+            </div>
+          </article>
+          <article
+            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
+          >
+            <div
+              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
+            >
+              <img
+                src="/public/images/training-program-img2.png"
+                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <span class="text-lg text-brand-600 font-bold">399</span>
+            <h3 class="text-neutral-900 font-bold mb-6">
+              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+            </h3>
+            <div class="flex items-center gap-2">
+              <p
+                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>22 ساعة</span>
+              </p>
+              <p
+                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.3335 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6665 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.8332 11.7334H2.1665"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                    fill="#073553"
+                    style="
+                      fill: #073553;
+                      fill: color(display-p3 0.0275 0.2078 0.3255);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>6 أشهر</span>
+              </p>
+            </div>
+          </article>
+          <article
+            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
+          >
+            <div
+              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
+            >
+              <img
+                src="/public/images/training-program-img3.png"
+                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <span class="text-lg text-brand-600 font-bold">399</span>
+            <h3 class="text-neutral-900 font-bold mb-6">
+              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+            </h3>
+            <div class="flex items-center gap-2">
+              <p
+                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>22 ساعة</span>
+              </p>
+              <p
+                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.3335 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6665 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.8332 11.7334H2.1665"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                    fill="#073553"
+                    style="
+                      fill: #073553;
+                      fill: color(display-p3 0.0275 0.2078 0.3255);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>6 أشهر</span>
+              </p>
+            </div>
+          </article>
+          <article
+            class="border border-brand-600/20 rounded-2xl bg-gradient-to-b from-brand-500/5 to-white via-brand-600/5 p-3"
+          >
+            <div
+              class="mb-3 object-cover h-48 rounded-xl relative after:absolute after:inset-0 overflow-hidden after:bg-secondary-900/40"
+            >
+              <img
+                src="/public/images/training-program-img4.png"
+                alt=" دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <span class="text-lg text-brand-600 font-bold">399</span>
+            <h3 class="text-neutral-900 font-bold mb-6">
+              دبلوم إدارة سلاسل الإمداد والخدمات اللوجستية
+            </h3>
+            <div class="flex items-center gap-2">
+              <p
+                class="flex items-center gap-1 font-medium text-sm text-brand-700 bg-brand-700/10 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.6668 7.99992C14.6668 11.6799 11.6802 14.6666 8.00016 14.6666C4.32016 14.6666 1.3335 11.6799 1.3335 7.99992C1.3335 4.31992 4.32016 1.33325 8.00016 1.33325C11.6802 1.33325 14.6668 4.31992 14.6668 7.99992Z"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.4734 10.1199L8.40675 8.88659C8.04675 8.67326 7.75342 8.15992 7.75342 7.73992V5.00659"
+                    stroke="#22A2C4"
+                    style="
+                      stroke: #22a2c4;
+                      stroke: color(display-p3 0.1333 0.6353 0.7686);
+                      stroke-opacity: 1;
+                    "
+                    stroke-width="1.11111"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>22 ساعة</span>
+              </p>
+              <p
+                class="flex items-center gap-1 font-medium text-sm bg-neutral-50 text-neutral-900 px-2 py-1.5 rounded-lg"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.3335 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6665 1.33325V3.33325"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 2.33325C12.8867 2.45325 14 3.29992 14 6.43325V10.5533C14 13.2999 13.3333 14.6733 10 14.6733H6C2.66667 14.6733 2 13.2999 2 10.5533V6.43325C2 3.29992 3.11333 2.45992 5.33333 2.33325H10.6667Z"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.8332 11.7334H2.1665"
+                    stroke="#073553"
+                    style="
+                      stroke: #073553;
+                      stroke: color(display-p3 0.0275 0.2078 0.3255);
+                      stroke-opacity: 1;
+                    "
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.00016 5.5C7.18016 5.5 6.48683 5.94667 6.48683 6.81333C6.48683 7.22667 6.68016 7.54 6.9735 7.74C6.56683 7.98 6.3335 8.36667 6.3335 8.82C6.3335 9.64667 6.96683 10.16 8.00016 10.16C9.02683 10.16 9.66683 9.64667 9.66683 8.82C9.66683 8.36667 9.4335 7.97333 9.02016 7.74C9.32016 7.53333 9.50683 7.22667 9.50683 6.81333C9.50683 5.94667 8.82016 5.5 8.00016 5.5ZM8.00016 7.39333C7.6535 7.39333 7.40016 7.18667 7.40016 6.86C7.40016 6.52667 7.6535 6.33333 8.00016 6.33333C8.34683 6.33333 8.60016 6.52667 8.60016 6.86C8.60016 7.18667 8.34683 7.39333 8.00016 7.39333ZM8.00016 9.33333C7.56016 9.33333 7.24016 9.11333 7.24016 8.71333C7.24016 8.31333 7.56016 8.1 8.00016 8.1C8.44016 8.1 8.76016 8.32 8.76016 8.71333C8.76016 9.11333 8.44016 9.33333 8.00016 9.33333Z"
+                    fill="#073553"
+                    style="
+                      fill: #073553;
+                      fill: color(display-p3 0.0275 0.2078 0.3255);
+                      fill-opacity: 1;
+                    "
+                  />
+                </svg>
+
+                <span>6 أشهر</span>
+              </p>
+            </div>
+          </article>
+        </div>
+        <button class="btn btn-brand mx-auto">
+          <span>استعراض كل البرامج </span>
+        </button>
+      </section>
+      <!-- end section 4  -->
+
+      <!-- start section 5 -->
+      <section class="container flex justify-center py-12">
+        <div class="w-full grid md:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="rounded-3xl bg-gradient-to-b from-[#DEEDF7] to-white py-10 px-32 text-center"
+          >
+            <img
+              src="images/homework.png"
+              alt="Graduate Icon"
+              class="mx-auto mb-10"
+            />
+
+            <h3 class="text-lg font-medium text-secondary-900 mb-2">
+              كن أحد طلابنا المميزين
+            </h3>
+            <p class="text-5xl font-extrabold text-secondary-900 mb-2">2000+</p>
+            <p class="text-[#131920] mb-7">عدد الخريجين حتى الآن</p>
+
+            <div>
+              <div class="flex gap-2 items-center mb-2">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>شهادة معتمدة تؤههلك لتوظيف الحكومي والخاص</p>
+              </div>
+              <div class="flex gap-2 items-center mb-2">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>تخصصات متنوعة مواكبة لسوق العمل</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>تعليم عن بعد وحضوري</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="rounded-3xl bg-gradient-to-b from-[#CBF4FF] to-white py-10 px-32 text-center"
+          >
+            <img
+              src="images/education-app.png"
+              alt="Education app"
+              class="mx-auto mb-10"
+            />
+
+            <h3 class="text-lg font-medium text-secondary-900 mb-2">
+              ابدأ رحلتك نحو النجاح
+            </h3>
+            <p class="text-5xl font-extrabold text-brand-700 mb-2">5000+</p>
+            <p class="text-[#131920] mb-7">طالب حالي</p>
+
+            <div>
+              <div class="flex gap-2 items-center mb-2">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>منصة تعليم تفاعلية</p>
+              </div>
+              <div class="flex gap-2 items-center mb-2">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>تعليم مرن</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="images/icons/check.svg" alt="check" />
+                <p>دعم فني وأكاديمي لخدمتك</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section 5 -->
+      <!-- start section 6 -->
+      <section class="container py-16">
+        <div style="background-image: url('/public/images/reviews-bg.png')">
+          <!-- Header -->
+          <h1 class="text-4xl font-bold text-center text-gray-900 mb-16">
+            آراء المتدربين
+          </h1>
+          <!-- first slider -->
+          <div class="relative overflow-hidden mb-10">
+            <div class="overflow-hidden">
+              <div class="slider-track">
+                <!-- First Set of Testimonials -->
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem1"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=noof"
+                        alt="نوف القحطاني"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >نوف القحطاني</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem2"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem3"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem4"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem5"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Set of Testimonials (for infinite loop) -->
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem1"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=noof"
+                        alt="نوف القحطاني"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >نوف القحطاني</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem2"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem3"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem4"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem5"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- second slider -->
+          <div class="relative overflow-hidden">
+            <div class="overflow-hidden">
+              <div class="slider-track-second">
+                <!-- First Set of Testimonials -->
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem1"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=noof"
+                        alt="نوف القحطاني"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >نوف القحطاني</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem2"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem3"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem4"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem5"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Set of Testimonials (for infinite loop) -->
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem1"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=noof"
+                        alt="نوف القحطاني"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >نوف القحطاني</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem2"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem3"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem4"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                  <div
+                    class="bg-white rounded-2xl p-8 border border-blue-50 h-full flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex gap-1 mb-4">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <p
+                        class="text-gray-700 text-sm leading-relaxed mb-6 text-right"
+                      >
+                        "الانضمام للأكاديمية كان واحد من أفضل قراراتي. ما كنت
+                        أعرف كم كنت أعيش في منطقة الراحة. التحديات هنا مش بس
+                        صعبة، لكنها ذكية. تدفعك تكسر جدران داخلية وتكتشف قدراتك
+                        الحقيقية."
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-start">
+                      <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=salem5"
+                        alt="سالم العتيبي"
+                        class="w-12 h-12 rounded-full border-2 border-blue-100"
+                      />
+                      <span class="text-gray-800 font-semibold text-sm"
+                        >سالم العتيبي</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section 6 -->
+      <!-- start section 7 -->
+      <section class="container py-16">
+        <div>
+          <!-- Header -->
+          <h1 class="text-4xl font-bold text-center text-gray-900 mb-16">
+            شركاء النجاح
+          </h1>
+          <!-- first slider -->
+          <div class="relative overflow-hidden mb-10">
+            <div class="overflow-hidden">
+              <div class="slider-track">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <img src="images/slider1.png" alt="slider1" />
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <img src="images/slider2.png" alt="slider2" />
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <img src="images/slider3.png" alt="slider2" />
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <img src="images/slider4.png" alt="slider2" />
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <img src="images/slider5.png" alt="slider2" />
+                </div>
+
+                <!-- Duplicate Cards -->
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <img src="images/slider1.png" alt="slider1" />
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <img src="images/slider2.png" alt="slider2" />
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <img src="images/slider3.png" alt="slider2" />
+                </div>
+
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <img src="images/slider4.png" alt="slider2" />
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <img src="images/slider5.png" alt="slider2" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section 7 -->
+      <!-- start section 8 -->
+      <section class="container bg-[#F3F8FC] py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col justify-between">
+            <div>
+              <h1 class="text-3xl font-bold text-right mb-2">
+                الاسئلة الشائعة
+              </h1>
+              <p class="text-gray-600 text-right mb-8">
+                هنا كل ما تحتاج إلى معرفته
+              </p>
+            </div>
+
+            <div class="text-right">
+              <h2 class="text-2xl font-bold">هل لا زال لديك سؤال ؟</h2>
+              <p class="text-gray-600 mb-4">نحن موجودين لمساعدتك</p>
+              <a href="#">
+                <img src="images/social/whatsapp.svg" alt="whatsapp" />
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">ماهي أكاديمية نمو؟</h3>
+                <img
+                  src="images/icons/arrow-up.svg"
+                  alt="Arrow Up"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: block">
+                أكاديمية نمو هي منصة تدريب معتمدة موثقة من الهيئة السعودية
+                للملكية الفكرية تحت إشراف المؤسسة العامة للتدريب التقني والمهني
+                تقدم برامج تعليمية وتطويرية متنوعة في مجالات متعددة، بإشراف نخبة
+                من المدربين المعتمدين، وتهدف لتمكين الأفراد بالمهارات اللازمة
+                لسوق العمل.
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">هل الشهادات معتمدة؟</h3>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Arrow Down"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: none">
+                نعم، جميع شهاداتنا معتمدة.
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">
+                  هل البرامج حضورية ام عن بعد؟
+                </h3>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Arrow Down"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: none">
+                نقدم برامج حضورية وعن بعد.
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">
+                  هل أحصل على دعم فني أو أكاديمي؟
+                </h3>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Arrow Down"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: none">
+                نعم، نقدم دعم فني وأكاديمي لجميع طلابنا.
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">
+                  هل أستطيع تقسيط رسوم البرامج ؟
+                </h3>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Arrow Down"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: none">
+                نعم، يمكنك تقسيط رسوم البرامج.
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <div
+                class="flex justify-between items-center bg-white rounded-3xl p-6 cursor-pointer faq-question"
+              >
+                <h3 class="text-lg font-semibold">
+                  هل يمكنني التسجيل لأكثر من دورة في نفس الوقت ؟
+                </h3>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Arrow Down"
+                  class="w-6 h-6 faq-arrow"
+                />
+              </div>
+              <div class="mt-4 text-gray-700 faq-answer" style="display: none">
+                نعم، يمكنك التسجيل في أكثر من دورة في نفس الوقت.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section 8 -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="container bg-secondary-900 text-white pt-16">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-10"
+      >
+        <!-- Tax Info -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <img src="footer-tax.png" alt="Tax Icon" />
+          <div>
+            <p class="text-neutral-200 mb-1">الرقم الضريبي</p>
+            <p>30213454600003</p>
+          </div>
+        </div>
+
+        <!-- Footer Logo and Links -->
+        <div class="flex flex-col items-center space-y-10">
+          <img src="footer-logo.png" alt="Footer Logo" />
+          <div class="flex space-x-6 rtl:space-x-reverse">
+            <a href="#" class="hover:text-brand-700">الشروط والاحكام</a>
+            <a href="#" class="hover:text-brand-700">تعلم معنا</a>
+            <a href="#" class="hover:text-brand-700">التسجيل</a>
+            <a href="#" class="hover:text-brand-700">تواصل معنا</a>
+          </div>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/instagram.svg" alt="instagram" />
+          </button>
+          <button
+            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/x.svg" alt="X" />
+          </button>
+          <button
+            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/snapchat.svg" alt="snapchat" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Copy-right -->
+      <div class="text-center border-t border-neutral-200">
+        <p class="text-sm py-6">الحقوق محفوظة ©2025 أكاديمية نمو</p>
+      </div>
+    </footer>
+  </body>
+</html>
