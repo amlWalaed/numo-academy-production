@@ -20,8 +20,8 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="container bg-white fixed w-full top-0 left-0 z-50">
-      <div class="mx-auto py-3 flex justify-between items-center">
+    <header class="bg-white fixed w-full top-0 left-0 z-50">
+      <div class="container py-3 flex justify-between items-center">
         <a href="/" class=""><img src="logo.png" alt="Logo" /></a>
         <button
           id="menu-toggle"
@@ -64,7 +64,7 @@
             تسجيل الدخول
           </button>
           <button
-            class="font-bold bg-brand-700 text-white rounded-full px-6 py-4 focus:outline-none"
+            class="font-bold bg-brand-700 hover:bg-brand-600 focus:bg-brand-500 text-white rounded-full px-6 py-4"
           >
             انضم الآن
           </button>
@@ -104,7 +104,7 @@
       </ul>
     </header>
 
-    <main>
+    <main class="mt-32">
       <!-- start section 1 -->
       <section
         class="bg-center bg-cover bg-no-repeat"
@@ -2121,9 +2121,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="container bg-secondary-900 text-white pt-16">
+    <footer class="bg-secondary-900 text-white pt-16">
       <div
-        class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-10"
+        class="container flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-10"
       >
         <!-- Tax Info -->
         <div class="flex items-center space-x-4 rtl:space-x-reverse">
@@ -2148,17 +2148,17 @@
         <!-- Social Media Buttons -->
         <div class="flex items-center space-x-4 rtl:space-x-reverse">
           <button
-            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
           >
             <img src="images/social/instagram.svg" alt="instagram" />
           </button>
           <button
-            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
           >
             <img src="images/social/x.svg" alt="X" />
           </button>
           <button
-            class="bg-neutral-200 rounded-full p-3 relative focus:outline-none"
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
           >
             <img src="images/social/snapchat.svg" alt="snapchat" />
           </button>
@@ -2166,9 +2166,11 @@
       </div>
 
       <!-- Copy-right -->
-      <div class="text-center border-t border-neutral-200">
+      <div class="container text-center">
+        <div class="border-t border-neutral-200"></div>
         <p class="text-sm py-6">الحقوق محفوظة ©2025 أكاديمية نمو</p>
       </div>
     </footer>
   </body>
+  <script type="module" src="js/main.js"></script>
 </html>
