@@ -629,10 +629,6 @@ video {
   --outline-text-color: #22A2C4;
   --outline-border-color: #22A2C4;
   --outline-hover-color: #32A598;
-  --soft-bg-color: #fff;
-  --soft-text-color: #22A2C4;
-  --soft-border-color: #22A2C4;
-  --soft-hover-color: #32A598;
 }
 
 .btn-neutral {
@@ -644,10 +640,6 @@ video {
   --outline-text-color: #131920;
   --outline-border-color: #E1E2E5;
   --outline-hover-color: #E7EDF0;
-  --soft-bg-color: #fff;
-  --soft-text-color: #22A2C4;
-  --soft-border-color: #22A2C4;
-  --soft-hover-color: #32A598;
 }
 
 .btn-solid {
@@ -748,16 +740,16 @@ video {
   inset-inline-end: -0px;
 }
 
-.-end-12 {
-  inset-inline-end: -3rem;
+.-end-16 {
+  inset-inline-end: -4rem;
 }
 
 .-start-0 {
   inset-inline-start: -0px;
 }
 
-.-start-12 {
-  inset-inline-start: -3rem;
+.-start-16 {
+  inset-inline-start: -4rem;
 }
 
 .-start-\[10\%\] {
@@ -798,14 +790,6 @@ video {
 
 .top-\[65\%\] {
   top: 65%;
-}
-
-.-end-16 {
-  inset-inline-end: -4rem;
-}
-
-.-start-16 {
-  inset-inline-start: -4rem;
 }
 
 .z-20 {
@@ -919,6 +903,10 @@ video {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[24rem\] {
+  width: 24rem;
 }
 
 .w-fit {
@@ -1205,8 +1193,16 @@ video {
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-bottom {
+  background-position: bottom;
 }
 
 .bg-center {
