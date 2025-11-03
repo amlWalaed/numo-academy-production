@@ -19,12 +19,148 @@
     <link rel="manifest" href="site.webmanifest" />
   </head>
   <body>
-    <main>
-      <section class="bg-gradient-to-t from-[#09562C] to-brand-700">
-        <div
-          class="grid md:grid-cols-2 gap-8 container py-[var(--section-padding)] min-h-[var(--section-min-height)] content-center"
+    <!-- Navbar -->
+    <nav class="bg-white sticky w-full top-0 inset-x-0 z-50">
+      <div
+        class="container py-3 flex justify-between xl:justify-normal gap-4 items-center"
+      >
+        <a href="/" class=""
+          ><img src="logo.png" alt="Logo" class="max-w-24"
+        /></a>
+
+        <!-- Desktop Navigation Links -->
+        <ul
+          class="hidden xl:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
         >
-          <article class="space-y-8">
+          <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
+          <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
+          <li><a href="#" class="hover:text-brand-700">تواصل معنا</a></li>
+          <li>
+            <a href="#" class="hover:text-brand-700">الجدول التدريبي</a>
+          </li>
+        </ul>
+
+        <!-- Desktop Search Bar -->
+        <div
+          class="hidden xl:flex ms-auto items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+        >
+          <input
+            type="text"
+            placeholder="ابحث عن دورة او برنامج"
+            class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
+          />
+          <img src="images/icons/search.svg" alt="Search" />
+        </div>
+
+        <!-- Desktop Buttons (Hidden on mobile) -->
+        <div class="hidden xl:flex gap-4 items-center">
+          <button class="btn btn-neutral btn-outline">تسجيل الدخول</button>
+          <button class="btn btn-brand btn-solid">انضم الآن</button>
+        </div>
+
+        <!-- Desktop Bag Icon Button -->
+        <div class="hidden xl:block relative">
+          <button class="bg-secondary-50 rounded-full p-3 focus:outline-none">
+            <img src="images/icons/bag.svg" alt="bag" width="24" />
+            <!-- Notification Badge -->
+            <span
+              class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+            >
+              3
+            </span>
+          </button>
+        </div>
+
+        <!-- Burger Menu Button (Visible on mobile) -->
+        <div class="xl:hidden flex gap-5">
+          <div class="relative">
+            <button
+              class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            >
+              <img src="images/icons/bag.svg" alt="bag" />
+              <!-- Notification Badge -->
+              <span
+                class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+              >
+                3
+              </span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="text-gray-700 text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Side Drawer Menu (Hidden by default, shown on mobile when toggled) -->
+      <div
+        id="side-drawer"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden z-50"
+      >
+        <div class="p-4">
+          <!-- Close Button -->
+          <button id="close-drawer" class="text-gray-700 text-2xl mb-4">
+            &times;
+          </button>
+
+          <!-- Drawer search -->
+          <div
+            class="flex xl:hidden ms-auto mb-4 items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+          >
+            <input
+              type="text"
+              placeholder="ابحث عن دورة او برنامج"
+              class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
+            />
+            <img src="images/icons/search.svg" alt="Search" />
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="space-y-4 text-gray-700 font-medium border-b pb-4 mb-4">
+            <li>
+              <a href="#" class="block hover:text-brand-700">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">برامجنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">تواصل معنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">الجدول التدريبي</a>
+            </li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-neutral btn-outline justify-center">
+              تسجيل الدخول
+            </button>
+            <button class="btn btn-brand btn-solid justify-center">
+              انضم الآن
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay for the side drawer -->
+      <div
+        id="drawer-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden xl:hidden z-40"
+      ></div>
+    </nav>
+    <main>
+      <!-- start banner -->
+      <section
+        class="bg-gradient-to-t from-[#09562C] via-brand-700 to-brand-700"
+      >
+        <div
+          class="grid md:grid-cols-2 gap-8 container py-[var(--section-padding)] content-center"
+        >
+          <article class="space-y-8 content-center">
             <h1 class="text-3xl font-extrabold text-white text-pretty">
               أساسيات ريادة الأعمال وبناء المشاريع الناشئة
             </h1>
@@ -38,7 +174,8 @@
               <button class="btn btn-secondary btn-solid w-[10rem]">
                 سجل الآن
               </button>
-              <button
+              <a
+                href="#introduction"
                 class="btn bg-white/15 border-white/15 text-white w-[10rem]"
               >
                 <svg
@@ -56,7 +193,7 @@
                 </svg>
 
                 <span> مقدمة المادة </span>
-              </button>
+              </a>
             </div>
           </article>
           <div>
@@ -68,6 +205,624 @@
           </div>
         </div>
       </section>
+      <!-- end banner -->
+      <div
+        class="container items-start grid lg:grid-cols-[1fr_2fr] py-[var(--section-padding)] gap-[var(--section-padding)]"
+      >
+        <section class="border border-neutral-100 rounded-2xl p-6 space-y-6">
+          <ul class="space-y-5 border-b border-neutral-100 pb-6">
+            <li class="flex items-center justify-between gap-3">
+              <img src="images/icons/calendar.svg" alt="calendar icon" />
+              <span class="text-neutral-900 font-bold">المدة</span>
+              <span class="text-neutral-200 font-medium ms-auto">6 شهور</span>
+            </li>
+            <li class="flex items-center justify-between gap-3">
+              <img src="images/icons/clock.svg" alt="clock icon" />
+              <span class="text-neutral-900 font-bold">عدد الساعات</span>
+              <span class="text-neutral-200 font-medium ms-auto">30 ساعة</span>
+            </li>
+            <li class="flex items-center justify-between gap-3">
+              <img
+                src="images/icons/profile-2user.svg"
+                alt="profile user icon"
+              />
+              <span class="text-neutral-900 font-bold">الفئة</span>
+              <span class="text-neutral-200 font-medium ms-auto"
+                >الطلاب والطالبات</span
+              >
+            </li>
+            <li class="flex items-center justify-between gap-3">
+              <img src="images/icons/video-play.svg" alt="video play icon" />
+              <span class="text-neutral-900 font-bold">طريقة التعليم</span>
+              <span class="text-neutral-200 font-medium ms-auto"
+                >دروس مسجلة</span
+              >
+            </li>
+          </ul>
+          <div>
+            <div class="flex items-center justify-center gap-3">
+              <span class="text-brand-700 text-3xl font-extrabold">300</span>
+              <span class="text-2xl text-neutral-200 line-through">399</span>
+            </div>
+            <p class="text-neutral-200 text-sm text-center">
+              شامل لضريبة القيمة المضافة
+            </p>
+          </div>
+          <button class="btn btn-brand btn-solid w-full">سجل الآن</button>
+        </section>
+
+        <!-- introduction section -->
+        <section id="introduction" class="space-y-[var(--section-space)]">
+          <h2 class="text-xl font-bold">مقدمة المادة</h2>
+          <div
+            class="relative cursor-pointer"
+            role="button"
+            aria-label="play video"
+          >
+            <img
+              src="images/training-program-img2.png"
+              role="presentation"
+              class="object-contain object-center rounded-2xl"
+            />
+            <div
+              class="bg-white rounded-full p-8 absolute top-1/2 start-1/2 translate-x-1/2 ltr:-translate-x-1/2 -translate-y-1/2"
+            >
+              <img
+                src="images/icons/play.svg"
+                role="video play icon"
+                class="object-contain"
+              />
+            </div>
+          </div>
+          <div
+            class="border border-neutral-100 rounded-2xl"
+            style="--padding: 1.5rem"
+          >
+            <header
+              class="border-b px-[var(--padding)] border-neutral-100 flex items-center gap-8"
+            >
+              <button
+                onclick="setActiveTab('description')"
+                data-tab="description"
+                class="text-lg font-bold p-[var(--padding)] transition-colors duration-500 border-b-transparent border-b-4 data-[active=true]:border-brand-700"
+                data-active="true"
+              >
+                وصف المادة
+              </button>
+              <button
+                onclick="setActiveTab('content')"
+                data-tab="content"
+                class="text-lg font-bold p-[var(--padding)] transition-colors duration-500 border-b-transparent border-b-4 data-[active=true]:border-brand-700"
+              >
+                محتوى المادة
+              </button>
+            </header>
+            <article
+              data-panel="description"
+              class="p-[var(--padding)] space-y-[var(--padding)] transition-all duration-300 opacity-100 translate-y-0"
+            >
+              <h3 class="text-xl font-bold">
+                أساسيات ريادة الأعمال وبناء المشاريع الناشئة
+              </h3>
+              <p class="text-balance text-neutral-300">
+                أساسيات ريادة الأعمال وبناء المشاريع الناشئة" هو دليلك العملي
+                لفهم عالم ريادة الأعمال، وتحويل الأفكار إلى مشاريع قابلة
+                للتنفيذ. ستتعلم خلاله كيف تبدأ مشروعك من الصفر، وتتفادى الأخطاء
+                الشائعة، وتبني نموذج عمل ناجح، وتجهز مشروعك للانطلاق بثقة.
+              </p>
+              <hr class="border-neutral-100" />
+              <h3 class="text-xl font-bold">ماذا ستتعلم هنا ؟</h3>
+              <ul>
+                <li class="text-neutral-300">
+                  ✅ فهم المفاهيم الأساسية لريادة الأعمال وكيف تختلف عن المشاريع
+                  التقليدية.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ تحويل فكرتك إلى مشروع فعلي من خلال خطوات مدروسة ومجربة.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ تحليل السوق والعملاء والمنافسين بطريقة تساعدك على بناء
+                  مشروع قوي ومُميز.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ بناء نموذج عمل تجاري (Business Model Canvas) يُوضح كيف يكسب
+                  مشروعك المال.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ إعداد خطة مالية بسيطة لحساب التكاليف وتوقع الأرباح بطريقة
+                  عملية وسهلة.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ بناء هوية علامتك التجارية ومعرفة أساسيات التسويق للمشاريع
+                  الناشئة.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ تجنّب الأخطاء الشائعة التي تُفشل المشاريع في بدايتها.
+                </li>
+                <li class="text-neutral-300">
+                  ✅ الاستعداد للانطلاق الفعلي والتعامل مع أول عملائك بثقة
+                  واحترافية.
+                </li>
+              </ul>
+              <hr class="border-neutral-100" />
+              <h3 class="text-xl font-bold">لمن هذه الدورة ؟</h3>
+              <div>
+                <p>
+                  👨
+                  <span class="text-neutral-900 font-bold"
+                    >المبتدئين في عالم ريادة الأعمال</span
+                  >
+                  الذين يرغبون في فهم الأساسيات والانطلاق بثقة.
+                </p>
+                <p>
+                  💡<span class="text-neutral-900 font-bold">
+                    الأشخاص الذين لديهم فكرة مشروع</span
+                  >
+                  ولا يعرفون كيف يبدأون بها أو يختبرونها.
+                </p>
+                <p>
+                  🎓
+                  <span class="text-neutral-900 font-bold"
+                    >الطلاب والخريجين</span
+                  >
+                  الذين يحلمون بإنشاء مشاريعهم الخاصة بدلًا من انتظار الوظيفة.
+                </p>
+                <p>
+                  📈<span class="text-neutral-900 font-bold">
+                    الطموحين الباحثين</span
+                  >
+                  عن دخل إضافي ويرغبون في تعلم خطوات بناء مشروع مربح.
+                </p>
+                <p>
+                  🧑‍💻
+                  <span class="text-neutral-900 font-bold">المستقلين </span
+                  >وأصحاب المهارات الذين يريدون تحويل مهاراتهم إلى مشروع ناشئ
+                  منظم.
+                </p>
+                <p>
+                  🚀<span class="text-neutral-900 font-bold">
+                    كل من يبحث عن خارطة طريق</span
+                  >
+                  واضحة وعملية لبناء مشروعه خطوة بخطوة.
+                </p>
+              </div>
+            </article>
+            <article
+              data-panel="content"
+              class="p-[var(--padding)] space-y-[var(--padding)] transition-all duration-300 hidden opacity-0 -translate-y-2"
+            >
+              <div class="space-y-4">
+                <button
+                  class="flex items-center flex-wrap justify-between gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="images/icons/arrow-down.svg"
+                      alt="collapse icon"
+                      class="js-accordion-icon transition-transform duration-300"
+                    />
+                    <div class="w-full text-start space-y-2">
+                      <p class="text-neutral-900 font-bold">
+                        مقدمة في ريادة الأعمال
+                      </p>
+                      <p class="text-neutral-200">3 دروس . 195د</p>
+                    </div>
+                  </div>
+
+                  <span
+                    class="text-brand-800 font-medium ms-auto bg-[#ECFDF5] text-sm border shrink-0 border-[#A7F3D0] px-3 py-2 rounded-full"
+                    >درس مجاني</span
+                  >
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-4">
+                <button
+                  class="flex items-center gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="images/icons/arrow-down.svg"
+                    alt="collapse icon"
+                    class="js-accordion-icon transition-transform duration-300"
+                  />
+                  <div class="w-full text-start space-y-2">
+                    <p class="text-neutral-900 font-bold">
+                      الوحدة الثانية: من الفكرة إلى المشروع
+                    </p>
+                    <p class="text-neutral-200">3 دروس . 195د</p>
+                  </div>
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <button
+                  class="flex items-center gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="images/icons/arrow-down.svg"
+                    alt="collapse icon"
+                    class="js-accordion-icon transition-transform duration-300"
+                  />
+                  <div class="w-full text-start space-y-2">
+                    <p class="text-neutral-900 font-bold">
+                      الوحدة الثالثة: دراسة السوق والمنافسين
+                    </p>
+                    <p class="text-neutral-200">3 دروس . 195د</p>
+                  </div>
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <button
+                  class="flex items-center gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="images/icons/arrow-down.svg"
+                    alt="collapse icon"
+                    class="js-accordion-icon transition-transform duration-300"
+                  />
+                  <div class="w-full text-start space-y-2">
+                    <p class="text-neutral-900 font-bold">
+                      الوحدة الرابعة: نموذج العمل التجاري (Business Model
+                      Canvas)
+                    </p>
+                    <p class="text-neutral-200">3 دروس . 195د</p>
+                  </div>
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <button
+                  class="flex items-center gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="images/icons/arrow-down.svg"
+                    alt="collapse icon"
+                    class="js-accordion-icon transition-transform duration-300"
+                  />
+                  <div class="w-full text-start space-y-2">
+                    <p class="text-neutral-900 font-bold">
+                      الوحدة الخامسة: التخطيط المالي والبسيط
+                    </p>
+                    <p class="text-neutral-200">3 دروس . 195د</p>
+                  </div>
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <button
+                  class="flex items-center gap-2 bg-brand-100 rounded-2xl px-6 py-4 w-full js-accordion-toggle"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="images/icons/arrow-down.svg"
+                    alt="collapse icon"
+                    class="js-accordion-icon transition-transform duration-300"
+                  />
+                  <div class="w-full text-start space-y-2">
+                    <p class="text-neutral-900 font-bold">
+                      الوحدة السادسة: العلامة التجارية والتسويق المبدئي
+                    </p>
+                    <p class="text-neutral-200">3 دروس . 195د</p>
+                  </div>
+                </button>
+                <ul class="space-y-2 hidden">
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">ما هي ريادة الأعمال؟</p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">
+                      الفرق بين رائد الأعمال وصاحب المشروع التقليدي
+                    </p>
+                    <span>19 د</span>
+                  </li>
+                  <li class="flex items-center gap-2 font-bold text-[14px]">
+                    <span>
+                      <img
+                        src="images/icons/video-circle.svg"
+                        alt="video circle icon"
+                      />
+                    </span>
+                    <p class="grow">لماذا الآن هو الوقت المناسب لتبدأ؟</p>
+                    <span>19 د</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </main>
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white pt-16">
+      <div
+        class="container flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-10"
+      >
+        <!-- Tax Info -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <img src="footer-tax.png" alt="Tax Icon" />
+          <div>
+            <p class="text-neutral-200 mb-1">الرقم الضريبي</p>
+            <p>30213454600003</p>
+          </div>
+        </div>
+
+        <!-- Footer Logo and Links -->
+        <div class="flex flex-col items-center space-y-10">
+          <img src="footer-logo.png" alt="Footer Logo" />
+          <div
+            class="text-start text-sm sm:flex sm:space-x-6 rtl:space-x-reverse"
+          >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >الشروط والاحكام</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >تعلم معنا</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >التسجيل</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >تواصل معنا</a
+            >
+          </div>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/instagram.svg" alt="instagram" />
+          </button>
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/x.svg" alt="X" />
+          </button>
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/snapchat.svg" alt="snapchat" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Copy-right -->
+      <div class="container text-center">
+        <div class="border-t border-neutral-200"></div>
+        <p class="text-sm py-6">الحقوق محفوظة ©2025 أكاديمية نمو</p>
+      </div>
+    </footer>
+    <script>
+      const tabs = document.querySelectorAll("[data-tab]");
+      const panels = document.querySelectorAll("[data-panel]");
+      const setActiveTab = (tab) => {
+        tabs.forEach((tabEl) => {
+          if (tabEl.getAttribute("data-tab") === tab) {
+            tabEl.setAttribute("data-active", true);
+          } else {
+            tabEl.setAttribute("data-active", false);
+          }
+        });
+        panels.forEach((panel) => {
+          const isTarget = panel.getAttribute("data-panel") === tab;
+          if (isTarget) {
+            panel.classList.remove("hidden");
+            // force reflow to enable transition from starting state
+            panel.getBoundingClientRect();
+            panel.classList.remove("opacity-0", "-translate-y-2");
+            panel.classList.add("opacity-100", "translate-y-0");
+          } else {
+            panel.classList.remove("opacity-100", "translate-y-0");
+            panel.classList.add("opacity-0", "-translate-y-2");
+            const handle = () => {
+              panel.classList.add("hidden");
+              panel.removeEventListener("transitionend", handle);
+            };
+            panel.addEventListener("transitionend", handle);
+          }
+        });
+      };
+      // Accordion toggle
+      document.querySelectorAll(".js-accordion-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          const list = btn.nextElementSibling;
+          const icon = btn.querySelector(".js-accordion-icon");
+          btn.setAttribute("aria-expanded", String(!expanded));
+          if (list) {
+            list.classList.toggle("hidden", expanded);
+          }
+          if (icon) {
+            icon.classList.toggle("rotate-180", !expanded);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
