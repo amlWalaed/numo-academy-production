@@ -1896,6 +1896,22 @@ html {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:order-1 {
+    order: 1;
+  }
+
+  .max-md\:order-2 {
+    order: 2;
+  }
+
+  .max-md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .max-md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .max-md\:flex-wrap {
     flex-wrap: wrap;
   }
