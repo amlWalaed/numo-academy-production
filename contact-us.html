@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أكاديمية نمو</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="أكاديمية نمو" />
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare" />
+    <style>
+      .contact-card {
+        transition: all 0.3s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-4px);
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-white sticky w-full top-0 inset-x-0 z-50">
+      <div
+        class="container py-3 flex justify-between xl:justify-normal gap-4 items-center"
+      >
+        <a href="/" class=""
+          ><img src="logo.png" alt="Logo" class="max-w-24"
+        /></a>
+
+        <!-- Desktop Navigation Links -->
+        <ul
+          class="hidden xl:flex space-x-6 rtl:space-x-reverse text-gray-700 font-medium"
+        >
+          <li><a href="#" class="hover:text-brand-700">الرئيسية</a></li>
+          <li><a href="#" class="hover:text-brand-700">برامجنا</a></li>
+          <li><a href="#" class="hover:text-brand-700">تواصل معنا</a></li>
+          <li>
+            <a href="#" class="hover:text-brand-700">الجدول التدريبي</a>
+          </li>
+        </ul>
+
+        <!-- Desktop Search Bar -->
+        <div
+          class="hidden xl:flex ms-auto items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+        >
+          <input
+            type="text"
+            placeholder="ابحث عن دورة او برنامج"
+            class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
+          />
+          <img src="images/icons/search.svg" alt="Search" />
+        </div>
+
+        <!-- Desktop Buttons (Hidden on mobile) -->
+        <div class="hidden xl:flex gap-4 items-center">
+          <button class="btn btn-neutral btn-outline">تسجيل الدخول</button>
+          <button class="btn btn-brand btn-solid">انضم الآن</button>
+        </div>
+
+        <!-- Desktop Bag Icon Button -->
+        <div class="hidden xl:block relative">
+          <button class="bg-secondary-50 rounded-full p-3 focus:outline-none">
+            <img src="images/icons/bag.svg" alt="bag" width="24" />
+            <!-- Notification Badge -->
+            <span
+              class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+            >
+              3
+            </span>
+          </button>
+        </div>
+
+        <!-- Burger Menu Button (Visible on mobile) -->
+        <div class="xl:hidden flex gap-5">
+          <div class="relative">
+            <button
+              class="bg-secondary-50 rounded-full p-3 relative focus:outline-none"
+            >
+              <img src="images/icons/bag.svg" alt="bag" />
+              <!-- Notification Badge -->
+              <span
+                class="absolute top-0 left-0 bg-secondary-800 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+              >
+                3
+              </span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="text-gray-700 text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Side Drawer Menu (Hidden by default, shown on mobile when toggled) -->
+      <div
+        id="side-drawer"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden z-50"
+      >
+        <div class="p-4">
+          <!-- Close Button -->
+          <button id="close-drawer" class="text-gray-700 text-2xl mb-4">
+            &times;
+          </button>
+
+          <!-- Drawer search -->
+          <div
+            class="flex xl:hidden ms-auto mb-4 items-center xl:w-[18rem] border focus-within:border-neutral-200 border-neutral-100 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700"
+          >
+            <input
+              type="text"
+              placeholder="ابحث عن دورة او برنامج"
+              class="grow focus:outline-none focus-visible:outline-none focus:border-transparent"
+            />
+            <img src="images/icons/search.svg" alt="Search" />
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="space-y-4 text-gray-700 font-medium border-b pb-4 mb-4">
+            <li>
+              <a href="#" class="block hover:text-brand-700">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">برامجنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">تواصل معنا</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-brand-700">الجدول التدريبي</a>
+            </li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-neutral btn-outline justify-center">
+              تسجيل الدخول
+            </button>
+            <button class="btn btn-brand btn-solid justify-center">
+              انضم الآن
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay for the side drawer -->
+      <div
+        id="drawer-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden xl:hidden z-40"
+      ></div>
+    </nav>
+
+    <main>
+      <section
+        class="pt-24 pb-40 bg-center bg-cover bg-no-repeat"
+        style="background-image: url(images/contact_us-bg.png)"
+      >
+        <div class="container">
+          <div
+            class="contact-grid grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-16"
+          >
+            <!-- Contact Information -->
+            <div class="flex flex-col gap-6 pt-11 self-end">
+              <!-- Title -->
+              <div class="mb-11">
+                <h1
+                  class="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-2"
+                >
+                  تواصل معنا
+                </h1>
+                <p class="text-base md:text-lg text-[#5F666D]">
+                  هل تواجهك مشكلة ؟ نحن جاهزون لمساعدتك
+                </p>
+              </div>
+
+              <!-- Phone -->
+              <div
+                class="contact-card flex flex-wrap items-center gap-6 bg-gradient-to-r from-white to-brand-300 rounded-2xl px-6 py-8"
+              >
+                <div class="mt-0 lg:mt-6">
+                  <img
+                    src="images/icons/contact-phone.svg"
+                    alt="contact phone"
+                  />
+                </div>
+                <div>
+                  <h3 class="mb-2 text-base text-neutral-900">
+                    تواصل مع خدمة العملاء
+                  </h3>
+                  <p class="text-xl font-extrabold text-neutral-900">
+                    9888 487 55 966+
+                  </p>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div
+                class="contact-card flex flex-wrap items-center gap-6 bg-gradient-to-r from-white to-brand-300 rounded-2xl px-6 py-8"
+              >
+                <div class="mt-0 lg:mt-6">
+                  <img
+                    src="images/icons/contact-whatsapp.svg"
+                    alt="contact whatsapp"
+                  />
+                </div>
+                <div>
+                  <h3 class="mb-2 text-base text-neutral-900">
+                    تواصل على الواتساب
+                  </h3>
+                  <p class="text-xl font-extrabold text-neutral-900">
+                    9888 487 55 966+
+                  </p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                class="contact-card flex flex-wrap items-center gap-6 bg-gradient-to-r from-white to-brand-300 rounded-2xl px-6 py-8"
+              >
+                <div class="mt-0 lg:mt-6">
+                  <img
+                    src="images/icons/contact-email.svg"
+                    alt="contact email"
+                  />
+                </div>
+                <div>
+                  <h3 class="mb-2 text-base text-neutral-900">راسلنا على</h3>
+                  <p class="text-xl break-all font-extrabold text-neutral-900">
+                    Numoacademy@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div
+              class="bg-white col-span-2 rounded-3xl p-8 md:p-10 lg:mr-28"
+            >
+              <h2
+                class="text-lg md:text-2xl font-bold text-neutral-900 mb-8 max-w-96"
+              >
+                أو يمكنك إرسال رسالة وسيتم الرد عليك في أسرع وقت
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white pt-16">
+      <div
+        class="container flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-10"
+      >
+        <!-- Tax Info -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <img src="footer-tax.png" alt="Tax Icon" />
+          <div>
+            <p class="text-neutral-200 mb-1">الرقم الضريبي</p>
+            <p>30213454600003</p>
+          </div>
+        </div>
+
+        <!-- Footer Logo and Links -->
+        <div class="flex flex-col items-center space-y-10">
+          <img src="footer-logo.png" alt="Footer Logo" />
+          <div
+            class="text-start text-sm sm:flex sm:space-x-6 rtl:space-x-reverse"
+          >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >الشروط والاحكام</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >تعلم معنا</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >التسجيل</a
+            >
+            <a href="#" class="block mb-2 sm:mb-0 hover:text-brand-700"
+              >تواصل معنا</a
+            >
+          </div>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/instagram.svg" alt="instagram" />
+          </button>
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/x.svg" alt="X" />
+          </button>
+          <button
+            class="bg-[#2F556F] rounded-full p-3 relative focus:outline-none"
+          >
+            <img src="images/social/snapchat.svg" alt="snapchat" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Copy-right -->
+      <div class="container text-center">
+        <div class="border-t border-neutral-200"></div>
+        <p class="text-sm py-6">الحقوق محفوظة ©2025 أكاديمية نمو</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
